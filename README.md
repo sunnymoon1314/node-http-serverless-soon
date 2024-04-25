@@ -1,30 +1,29 @@
 "# node-http-serverless-soon" 
 
-# Introduction
+# A. Introduction
 
 There are many different Serverless Framework available that we can use to implement a Serverless Application (https://geekflare.com/serverless-apps-frameworks/).
 
-Basically these frameworks provide the convenient step-by-step instructions to guide us through the procedure to follow that build the serverless application.
+Basically these frameworks provide the step-by-step instructions to guide us through the procedure to follow that build the serverless application.
 
-In this repository, we will use the Serverless Framework available at https://www.serverless.com/framework.
+In this repository, we will use the Serverless Framework available at https://www.serverless.com/framework to build our serverless application.
 
-Serverless Framework is a vendor-agnostic framework which supports serveless application development and deployment in a lot of cloud providers such as AWS, Microsoft Azure, Google Cloud, Apache OpenWhisk, Oracle Cloud.
+Serverless Framework is a vendor-agnostic framework which supports serveless application development and deployment in a lot of cloud providers such as AWS, Microsoft Azure, Google Cloud, Apache OpenWhisk and Oracle Cloud.
 
 We will provide the details for doing the same using AWS Serverless Application Model (https://aws.amazon.com/serverless/sam/) in another repository.
 
-For a detailed comparison of the Serverless Framework versus the AWS Serverless Application Model, please refer to the link at:
-https://www.serverless.direct/post/serverless-framework-vs-aws-sam-a-detailed-comparison
+For a detailed comparison of the Serverless Framework versus the AWS Serverless Application Model, please refer to the link at https://www.serverless.direct/post/serverless-framework-vs-aws-sam-a-detailed-comparison
 
-# Pre-requisites for this tutorial
+# B. Pre-requisites for this tutorial
 
 In order to complete the tutorial, please ensure you have met the following pre-requisites:
 - You have an AWS account.
 - You have setup the AWS CLI tool and can access/provision the AWS services/resources via the Windows Command Prompt.
-- You have the required permissions to access/provision AWS services/resources such as S3, Lambda, API Gateway, CloudFormation.
+- You have the required permissions to access/provision AWS services/resources such as S3, Lambda, API Gateway and CloudFormation.
 
 I am using Windows 10 Home Edition for the illustration but the instructions should be quite similar for other operating systems such as Linux or MacOS.
 
-# Step-By-Step Instructions
+# C. Step-By-Step Instructions
 
 ## Step 1: Install npm and node
 
@@ -43,7 +42,7 @@ Note that installing node using the Installer also installs npm.
 ## Step 2: Create an empty application folder
 
 Create an application folder in your local machine/laptop with the name:
-github-3.6-soon-node-http-serverless.
+__github-3.6-soon-node-http-serverless__.
 
 ![alt text](images/module_3.6_change_to_project_folder.png)
 
@@ -53,13 +52,13 @@ github-3.6-soon-node-http-serverless.
 
 ## Step 4: Start the serverless setup process
 
-Use the serverless command to setup your serverless application. You will be prompted with a number of questions to configure your serverless environment:
+Use the __serverless__ command to setup your serverless application. You will be prompted with a number of questions to configure your serverless environment:
 
 ![alt text](images/module_3.6_run_serverless_1_of_8.png)
 
 ### Step 4.1: Select AWS - Node.js - HTTP API
 
-Use up and down arrow keys to navigate the options above. In this case, we are going to select AWS - Node.js - HTTP API. Press the Enter key to confirm the selection.
+Use up and down arrow keys to navigate the options above. In this case, we are going to select __AWS - Node.js - HTTP API__. Press the __Enter__ key to confirm the selection.
 
 ![alt text](images/module_3.6_run_serverless_2_of_8.png)
 
@@ -67,14 +66,14 @@ Use up and down arrow keys to navigate the options above. In this case, we are g
 
 ![alt text](images/module_3.6_run_serverless_3_of_8.png)
 
-Upon completion of the download, the Serverless Framework will create some template files to a new project folder node-http-serverless-soon in the current folder.
+Upon completion of the download, the Serverless Framework will create some template files to a new project folder __node-http-serverless-soon__ in the current folder.
 
 ![alt text](images/module_3.6_run_serverless_4_of_8.png)
 
 The details of the files in the
-C:\Users\bunny\github-3.6-soon-node-http-serverless\node-http-serverless-soon folder are shown below:
+__C:\Users\bunny\github-3.6-soon-node-http-serverless\node-http-serverless-soon__ folder are shown below:
 
-.gitignore
+__.gitignore__
 ```
 # package directories
 node_modules
@@ -84,7 +83,7 @@ jspm_packages
 .serverless
 ```
 
-index.js
+__index.js__
 ``` Node.js
 module.exports.handler = async (event) => {
   return {
@@ -101,7 +100,7 @@ module.exports.handler = async (event) => {
 };
 ```
 
-serverless.yml
+__serverless.yml__
 ``` yaml
 service: node-http-serverless-soon
 frameworkVersion: '3'
@@ -129,11 +128,11 @@ The contents of README.md is too long and left out for brevity.
 
 ![alt text](images/module_3.6_run_serverless_6_of_8.png)
 
-Beware that when you type n and then Enter for the first time, the cursor will go to the second line as shown above. Please type n again and you will see the same prompt appearing again:
+Beware that when you type __n__ and then __Enter__ for the first time, the cursor will go to the second line as shown above. Please type __n__ again and you will see the same prompt appearing again:
 
 ![alt text](images/module_3.6_run_serverless_7_of_8.png)
 
-Now, just press the Enter key to confirm the selection.
+Now, just press the __Enter__ key to confirm the selection.
 
 Here is the screensshot of the complete setup process.
 
@@ -160,9 +159,9 @@ The next few screenshots showed what happened during the application deployment 
 
 ![alt text](images/module_3.6_serverless_deploy_2_of_6.png)
 
-The configuration details in the serverless.yml file are used to create the CloudFormation stack files to be uploaded to the provider AWS.
+The configuration details in the __serverless.yml__ file are used to create the CloudFormation stack files to be uploaded to the provider AWS.
 
-These stack files are generated in a folder .serverless within the project folder.
+These stack files are generated in a folder __.serverless__ within the project folder.
 
 ![alt text](images/module_3.6_serverless_deploy_3_of_6.png)
 
@@ -176,9 +175,9 @@ Once all the resources are created in AWS, the details of the endpoints and so o
 
 ![alt text](images/module_3.6_serverless_deploy_6_of_6.png)
 
-The preceding screenshot shows that the endpoint for the GET API is accessible at https://3pz6pcd4hj.execute-api.us-east-1.amazonaws.com/
+The preceding screenshot shows that the endpoint for the GET API is accessible at __https://3pz6pcd4hj.execute-api.us-east-1.amazonaws.com/__
 
-We can use the curl command to test the endpoint as shown in the next screenshot.
+We can use the __curl__ command to test the endpoint as shown in the next screenshot.
 
 ![alt text](images/module_3.6_serverless_test_curl.png)
 
@@ -227,7 +226,7 @@ Alternatively, we can test the endpoint using the browser:
 
 ![alt text](images/module_3.6_serverless_test_browser.png)
 
-# Verifications of resources created in AWS
+# D. Verifications of resources created in AWS
 
 The next few screenshots showed the resources created in AWS:
 - CloudFormation stack
@@ -246,9 +245,9 @@ The next few screenshots showed the resources created in AWS:
 
 ![alt text](images/module_3.6_aws_created_resources_cloudwatch.png)
 
-# Destroy the resources created in AWS
+# E. Destroy the resources created in AWS
 
-Once we have verified our application is working as expected, we should delete all the resources that are deployed to AWS using the serverless remove command.
+Once we have verified our application is working as expected, we should delete all the resources that are deployed to AWS using the __serverless remove__ command.
 
 ![alt text](images/module_3.6_serverless_remove_1_of_3.png)
 
@@ -256,12 +255,10 @@ Once we have verified our application is working as expected, we should delete a
 
 ![alt text](images/module_3.6_serverless_remove_3_of_3.png)
 
-Note that not all the resources are removed. For example, the S3 bucket may still be left in the AWS. You need to manually delete the S3 bucket if you do not need it any more.
-
 # Suggestion for future works
 
 So far we have seen how the serverless application is implemented with only a GET REST API endpoint.
 
 We will look at how the application features can be enhanced to make the endpoint respond to:
 - Other REST API actions such as POST, PUT, etc.
-- Events that are triggerd by other AWS services such as when data is loaded into S3 bucket, etc.
+- Events that are triggerd by other AWS services such as S3 bucket when data is loaded into it, etc.
